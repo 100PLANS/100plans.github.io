@@ -129,14 +129,14 @@
     var _prevOnload = window.onload;
     window.onload = function() {
         var switchLang = document.getElementById("menu").getElementsByClassName("menu-item-switch_lang")[0].childNodes[0];
-            var href = window.location.href;
-            var indexOfEn = href.toLowerCase().indexOf('/en/');
-            if(indexOfEn !== -1) {
-                switchLang.href = href.replace('/en/', '/');
-            }
-            else {
-                switchLang.href = href.replace(/(^http[s]?:\/\/[a-z0-9.]*[:?0-9]*\/)(.*)/i, '$1en/$2');
-            }
+        var href = window.location.href;
+        var indexOfEn = href.toLowerCase().indexOf('/en/');
+        if(indexOfEn !== -1) {
+            switchLang.href = href.replace('/en/', '/');
+        }
+        else {
+            switchLang.href = href.replace(/(^http[s]?:\/\/[a-z0-9.]*[:?0-9]*\/)(.*)/i, '$1en/$2');
+        }
     }
 </script>
 
@@ -398,22 +398,6 @@
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/11/09/first/" rel="next" title="第一">
-                <i class="fa fa-chevron-left"></i> 第一
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
 
       
       
@@ -486,7 +470,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
