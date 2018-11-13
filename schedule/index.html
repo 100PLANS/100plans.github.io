@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-tw,en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://100plans.com/schedule/index.html">
 <meta property="og:site_name" content="100 PLANS">
 <meta property="og:description" content="Only for one.">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale" content="zh-tw">
 <meta property="og:updated_time" content="2018-11-08T22:17:28.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="schedule">
@@ -124,7 +124,21 @@
 
 
 
-
+<script type="text/javascript">
+    // Wait for the page to load first
+    var _prevOnload = window.onload;
+    window.onload = function() {
+        var switchLang = document.getElementById("menu").getElementsByClassName("menu-item-switch_lang")[0].childNodes[0];
+            var href = window.location.href;
+            var indexOfEn = href.toLowerCase().indexOf('/en/');
+            if(indexOfEn !== -1) {
+                switchLang.href = href.replace('/en/', '/');
+            }
+            else {
+                switchLang.href = href.replace(/(^http[s]?:\/\/[a-z0-9.]*[:?0-9]*\/)(.*)/i, '$1en/$2');
+            }
+    }
+</script>
 
   <title>schedule | 100 PLANS</title>
   
@@ -138,7 +152,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
 
   
   
@@ -186,7 +200,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            首页
+            首頁
           </a>
         </li>
       
@@ -196,7 +210,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            分类
+            分類
           </a>
         </li>
       
@@ -206,7 +220,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-switch_lang">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-language"></i> <br />
+            
+            中文
           </a>
         </li>
       
@@ -219,7 +243,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            搜索
+            檢索
           </a>
         </li>
       
@@ -341,7 +365,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">日志</span>
+                  <span class="site-state-item-name">文章</span>
                 </a>
               </div>
             
